@@ -69,7 +69,14 @@ var SupportedCodes = map[rune]codeList{
 		92: makeCodeMap('X', 'Y', 'Z', 'E'),                // Set position (reset all to 0 w/ no params)
 	},
 	'M': codeList{
-		0: makeCodeMap(),
+		0:   makeCodeMap(), // Pause
+		1:   makeCodeMap(), // Pause
+		17:  makeCodeMap(), // Enable motors
+		18:  makeCodeMap(), // Disable motors
+		80:  makeCodeMap(), // Turn on power supply
+		81:  makeCodeMap(), // Turn off power supply
+		400: makeCodeMap(), // Wait to finish move queue
+		410: makeCodeMap(), // Quickstop
 	},
 }
 
